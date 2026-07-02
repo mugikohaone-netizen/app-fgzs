@@ -46,6 +46,7 @@
 
   /* upload tray */
   .tray{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
     border:2px dashed rgba(243,236,221,.28);
     border-radius:16px;
     padding:52px 20px;
@@ -260,7 +261,6 @@ function handleFile(file){
   reader.readAsDataURL(file);
 }
 
-trayEl.addEventListener('click',()=>fileInput.click());
 trayEl.addEventListener('keydown',(e)=>{
   if(e.key==='Enter'||e.key===' '){e.preventDefault();fileInput.click();}
 });
